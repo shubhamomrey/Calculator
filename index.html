@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="icon" href="icon.png" type="image/x-icon" />
+
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .cal {
+        display: flex;
+        justify-content: center;
+        background-color: gray;
+        width: 100vw;
+        height: 100vh;
+      }
+      h1 {
+        display: flex;
+        justify-content: center;
+        color: blue;
+        text-shadow: 3px 2px 1px lightblue;
+      }
+      .result-show{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+      }
+      input {
+        margin: 10px;
+        padding: 5px;
+        box-shadow: 3px 2px 5px lightblue;
+      }
+      .cal > div {
+        width: 250px;
+        height: 350px;
+        background-color: rgb(235, 235, 235);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .buttons{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        width: 170px;
+        margin-left: 10px;
+        
+      }
+      .equal{
+        margin:  20px 10px;
+        width: 170px;
+        display: grid;
+      }
+    </style>
+    <div class="cal">
+      <div>
+        <h1><i class="fa-solid fa-calculator"></i> &nbsp; Calculator</h1>
+        <hr />
+
+        <div>
+            <div class="result-show">
+                <h3 id="result">Answer will be here</h3>
+            </div>
+          <label for="number1"> Enter First numbers:</label>
+          <input type="text" id="number1" placeholder="Enter numbers here" /><br />
+          <label for="number2"> Enter Second numbers:</label>
+          <input type="text" id="number2" placeholder="Another numbers here" />
+          <div class="buttons">
+            <button onclick="sum()">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <button onclick="subtraction()">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <button onclick="multiply()">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <button onclick="divide()">
+              <i class="fa-solid fa-divide"></i>
+            </button>
+          </div>
+          <div class="equal">
+            <button onclick="equal()">
+              <i class="fa-solid fa-equals"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/36c8e6306c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
